@@ -241,7 +241,8 @@ This program simulates an input stream from a GPS peripheral module, and perform
 Geiger Counter (\~4 ms)
 This program comes from [ArduinoPocketGeiger](https://github.com/MonsieurV/ArduinoPocketGeiger) and was modified/ported to run on our platform and to mock inputs/behavior. It implements a Geiger Counter, which is used to measure radiation.
 
-Mouse 
+Mouse (~2 minutes)
+
 
 ## CFLog
 
@@ -254,9 +255,10 @@ The custom hardware prototype is implmented a top ACFA. At the time, ACFA logged
 The TEE based version of SpecCFA is implemented ontop of TRACES. Unlike ACFA, TRACES only logs the destination address of each control-flow transfer. Due to this, each entry in these logs represents a single memory address.
 
 ### Precomputed Logs
+Pre-computed cflogs for both SpecCFA variants are also avialable in this repository, each within their own respective directories. In both cases, there is a folder representing the baseline case (with SpecCFA disabled) and a separate folder named by the number of subpaths that are configured while SpecCFA is enabled. These folders contain the resulting CFLogs from these cases.
 
-We also include all logs we generated to evaluate SpecCFA with the ***TODO*** which directories
+For the `spec-cfa-trustzone` version, pre-computed CFlogs are available in the `cflogs` folder. Each application has its own folder, which has `baseline` for the baseline case, and numerical folders for each case when SpecCFA is enabled.
 
-***TODO*** figure out which logs are good and which are bad
+For the `spec-cfa-hw` version, pre-computed logs are within the `logs` directory. Within this directory, there are two folders for each application. One named `_baseline` and one named `_experiments`. The `_baseline` folder contains the resulting cflogs for the baseline case, whereas the `_experiments` folder contains the previously mentioned numerical folders, pertaining to resulting CFLogs when SpecCFA is enabled and configured with that number of subpaths.
 
-***TODO*** Describe log directory structure
+
