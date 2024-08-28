@@ -242,9 +242,9 @@ Geiger Counter (\~4 ms)
 This program comes from [ArduinoPocketGeiger](https://github.com/MonsieurV/ArduinoPocketGeiger) and was modified/ported to run on our platform and to mock inputs/behavior. It implements a Geiger Counter, which is used to measure radiation.
 
 Mouse (~2 minutes)
+This program comes from [Krakenus](https://github.com/Krakenus/arduino-joystick-mouse/blob/master/joystick_mouse.ino) on GitHub and implements a joystick mouse for Arduino. This source code was modified/ported to run on our platform and to mock inputs/behavior.
 
-
-## CFLog
+## CFLogs
 
 ### Log Structure
 
