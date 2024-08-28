@@ -9,8 +9,11 @@ Based on this premise, we propose SpecCFA: an architecture to enable configurabl
 SpecCFA allows Vrf to speculate on likely control flow sub-paths for each attested operation. At runtime, when a sub-path in CFLog matches a pre-defined speculation, the entire sub-path is replaced by a reserved symbol of reduced size, resulting in significant savings. SpecCFA can be deployed atop existing CFA architectures to support simultaneous speculation on multiple variable-length control flow sub-paths. We implement an open-source prototype of SpecCFA atop an existing CFA architecture aimed at low-end MCUs (e.g, TI MSP430) and evaluate its cost-effectiveness.
 
 ## SpecCFA Directory Structure
-    
-    Todo when repo is stable
+
+This repository contains three main directories:
+- `path-selection`: contains python scripts for the subpath selection algorithms
+- `spec-cfa-hw`: contains the variant of SpecCFA built atop custom hardware for runtime auditing (ACFA) and the MSP430 MCU
+- `spec-cfa-trustzone` contains the variant of SpecCFA built atop CFA for off-the-shelf devices (ISC-FLAT) and the ARM Cortex-M MCU with TrustZone
 
 ## Development Enviornment
 
@@ -152,9 +155,7 @@ After running both script, all the necessary files for synthesis will have been 
 
     **Note:** Synthesizing the hardware can take several minutes
 
-2. If/When the synthesis succeeds, you will be prompted "Run Implmentation. For now just close this window. The implementation files are not needed to simulate SpecCFA's behavior for simple testing. Instead the implemntation is only needed for testing the CFLog transmission/total run-time overhead of the system. We discuss how to implement the hardware in a later [section]()
-
-***TODO*** add link
+2. If/When the synthesis succeeds, you will be prompted "Run Implmentation. For now just close this window. The implementation files are not needed to simulate SpecCFA's behavior for simple testing. Instead the implemntation is only needed for testing the CFLog transmission/total run-time overhead of the system. We discuss how to implement the hardware in ***### Run Implementation & Deploy SpecCFA on Basys3 FPGA***
 
 ### Run Simulation
 
@@ -166,7 +167,7 @@ After completeing the steps discussed in [Creating a Vivado Project](#creating-a
 
 3. Then go back to the Vivado window and in the "Flow Navigator" tab (left-most menu in the Vivado window) click "Run Simulation" then "Run Behavioral Simulation"
 
-4. Once the simulation window opens you are ready to simulate SpecCFA's behavior. When running the simulation all CFLog slices will be saved to the ***TODO*** put somewhere
+4. Once the simulation window opens you are ready to simulate SpecCFA's behavior. When running the simulation all CFLog slices will be saved to the `logs` directory
 
 To run the simulation use either of the blue play buttons found at the top of the window. The center (and larger) button will run the simulation indefintely until paused (by pressing the same button). The second play button will execute the simulation for a specified (the input field next to the button) amount of time. The latter can also be triggered by pressing "Shift+2"
 
@@ -189,28 +190,67 @@ Your FPGA should be now displayed on the hardware manager menu.
 
 ## SpecCFA TEE (TrustZone) Variant 
 
-***TODO***
+For the TrustZone variant of SpecCFA, The [STM32CubeIDE](https://www.st.com/en/development-tools/stm32cubeide.html) is used for development, and is deployed on an [STM32 Nucleo-144 development board](https://www.st.com/en/evaluation-tools/nucleo-l552ze-q.html#overview) with STM32L552ZE MCU.
+
+### Import and setup STM32 Project
+
+1) Import the files from `./spec-cfa-trustzone/prv/` into a project.
+
+2) In the Project Explorer, click the drop-down arrow on `SpecCFA-TZ` to reveal `SpecCFA-TZ_NonSecure`. Right click `SpecCFA-TZ_NonSecure` and click "Properties". In the next window, click "C/C++ Build -> Settings -> MCU Post build outputs". Click the checkbox on the option "Generate list file". Then click "Apply and Close". 
+
+3) Repeat step 2 for `SpecCFA-TZ_Secure`.
+
+### Running applications and generating CFLogs
+
+1) To build apps, select the application to run by defining `APP_SEL` on line 19 of `vrf/application.h`.
+
+2) The script `vrf/pre-process.sh` will compile the C code into assembly, instrument the assembly code, and copy the instrumented assembly into the STM32 Project directory. First, modify line 9 of `vrf/pre-process.sh` to point to the root directory of the STM32 project. Then, in `vrf/` directory, run the following console command: `./pre-process.sh application instrument`. This will return two assembly files: `application.s` (containing the unmodified application assembly code)  and `instrument.s` (containing the instrumented version of the assembly code).
+
+3) On line 10-11 of `speculation.c`, define `SPECULATE` to enable SpecCFA. With this line disabled, the program will behave as if just ISC-FLAT is executing. Next, the content of lines before the first starred line depends on the selected application application. Based on the selected application, head to the apps subdirectory within the `spec-cfa-tustzone/cflogs` directory. Within these are the lines of code to add the tested subpaths, kept within a text file titled `specs.txt`. Add these lines of code after the `define SPECULATE` and the starred line. Overwrite any previous definitions of the subpath information.
+
+4) Then, in STM32CubeIDE, right-click `SpecCFA-TZ_NonSecure` and select "Clean Project". Repeat and select "Build Project" to build the project.
+
+5) Back in the console from `vrf/demo-vrf-source`, run `readmem.sh`. 
+
+6) Then, in STM32CubeIDE, right-click `SpecCFA-TZ_Secure` and select "Build Project". Repeat and select "Build Project" to build the project.
+
+7) In STM32CubeIDE, right-click `SpecCFA-TZ_Secure`. Then click "Run As" followed by "STM32 Cortex M C/C++ Application". Prv is now running and waiting for a request to run the application from Vrf
+
+8) From the Vrf terminal window in `./vrf/`, run the python script `vrf_communication_module.py`. 
+
+9) Press ENTER to send a request from Vrf for Prv to execute the application software. 
+
+10) During execution, Vrf will save CFLogs sent to Prv in the `vrf/cflog` directory. To compare to the expected result, inspect the numerically-labeld folders within the dictory `spec-cfa-trustzone/cflogs/<app>`, which correspond to the resuling CFLogs for that many sub-paths enabled (`baseline` includes the resulting CFLogs when SpecCFA is disabled).
 
 ## Test Applications
 
-Along with SpecCFA's prototypes, we also provide 7 sample embedded applications for testing (and their simulation time in Vivado): 
+Along with SpecCFA's prototypes, we also provide 6 sample embedded applications for testing (and their simulation time in Vivado): 
 
-Ultrasonic Sensor (\~8 ms)
+**Ultrasonic Sensor (\~8 ms)**
+
 Ultrasonic sensor is ported from [Seeed-Studio](https://github.com/Seeed-Studio/LaunchPad_Kit/tree/master/Grove_Modules/ultrasonic_ranger), and implements a simple ultrasonic sensor using delay and sensor loops.
 
-Temperature Sensor (\~3 ms)
+**Temperature Sensor (\~3 ms)**
+
 This program implements a temperature and humidity sensor. It was ported from [Seeed-Studio](https://github.com/Seeed-Studio/LaunchPad_Kit/tree/master/Grove_Modules/temp_humi_sensor). It implements such sensors similarly to ultrasonic, using delay loops and sensing loops.
 
-Syringe Pump (\~55 ms)
+**Syringe Pump (\~55 ms)**
+
 This program simulates a remotely operated Syringe Pump that receives input to control dosages. It was ported to our platforms from [OpenSyringePump](https://github.com/manimino/OpenSyringePump).
 
-GPS (\~30 ms)
+**GPS (\~30 ms)**
+
 This program simulates an input stream from a GPS peripheral module, and performs the processing of the strings. This source code came from [TinyGPS](http://arduiniana.org/libraries/tinygpsplus/) and was modified to be compatible with our platform, mock its behavior, and to simulate inputs.
 
-Geiger Counter (\~4 ms)
+**Geiger Counter (\~4 ms)**
+
 This program comes from [ArduinoPocketGeiger](https://github.com/MonsieurV/ArduinoPocketGeiger) and was modified/ported to run on our platform and to mock inputs/behavior. It implements a Geiger Counter, which is used to measure radiation.
 
-## CFLog
+**Mouse (~2 minutes)**
+
+This program comes from [Krakenus](https://github.com/Krakenus/arduino-joystick-mouse/blob/master/joystick_mouse.ino) on GitHub and implements a joystick mouse for Arduino. This source code was modified/ported to run on our platform and to mock inputs/behavior.
+
+## CFLogs
 
 ### Log Structure
 
@@ -221,9 +261,10 @@ The custom hardware prototype is implmented a top ACFA. At the time, ACFA logged
 The TEE based version of SpecCFA is implemented ontop of TRACES. Unlike ACFA, TRACES only logs the destination address of each control-flow transfer. Due to this, each entry in these logs represents a single memory address.
 
 ### Precomputed Logs
+Pre-computed cflogs for both SpecCFA variants are also avialable in this repository, each within their own respective directories. In both cases, there is a folder representing the baseline case (with SpecCFA disabled) and a separate folder named by the number of subpaths that are configured while SpecCFA is enabled. These folders contain the resulting CFLogs from these cases.
 
-We also include all logs we generated to evaluate SpecCFA with the ***TODO*** which directories
+For the `spec-cfa-trustzone` version, pre-computed CFlogs are available in the `cflogs` folder. Each application has its own folder, which has `baseline` for the baseline case, and numerical folders for each case when SpecCFA is enabled.
 
-***TODO*** figure out which logs are good and which are bad
+For the `spec-cfa-hw` version, pre-computed logs are within the `logs` directory. Within this directory, there are two folders for each application. One named `_baseline` and one named `_experiments`. The `_baseline` folder contains the resulting cflogs for the baseline case, whereas the `_experiments` folder contains the previously mentioned numerical folders, pertaining to resulting CFLogs when SpecCFA is enabled and configured with that number of subpaths.
 
-***TODO*** Describe log directory structure
+

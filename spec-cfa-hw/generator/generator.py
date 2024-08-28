@@ -288,7 +288,10 @@ def build_meta(subpaths, paths):
             outputs_blockmem += f".block_entry_src{i}      (block_entry_src{i}),\n\t.block_entry_dest{i}     (block_entry_dest{i}),\n\t.block_len{i}            (block_len{i}),\n\t.block_id{i}             (block_id{i}),\n\t"
             inputs_blockmem += f".block_ptr{i}          (block_ptr{i}),\n\t"
     
-    sig_bit = math.floor(math.log2(size))
+    try:
+        sig_bit = math.floor(math.log2(size))
+    except:
+        sig_bit = 1
     log_size = 2**(sig_bit+1)
     meta_template = ""
     with open("templates/speccfa_metadata.v") as meta_file:
@@ -392,9 +395,14 @@ def build_spec(paths):
             addr += f":\n{28*' '}detect_active{i} ? active_block_cflog_addr_out{i} "
             id += f":\n{26*' '}detect_active{i} ? block_id{i} "
     
-    detect += ";\n"
-    addr += ": 16'b0;\n"
-    id += ": 16'b0;\n"
+    if paths == 0:
+        detect += "wire detect_mux = 0;\n"
+        addr += "wire [15:0] active_addr = 16'b0;\n"
+        id += " wire [7:0] active_id = 16'b0;\n"
+    else:
+        detect += ";\n"
+        addr += ": 16'b0;\n"
+        id += ": 16'b0;\n"
 
     spec_template = ""
     with open("templates/speccfa.v") as spec_file:
