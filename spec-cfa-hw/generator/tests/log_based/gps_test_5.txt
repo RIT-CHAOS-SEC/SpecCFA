@@ -1,0 +1,9 @@
+5 Calculated Subpaths
+_______________________________
+	41.96319018404908 - eec4eec6 eec6eec8 eecaeed2 eed4eeba
+	6.584867075664621 - ed80ed82 ed8ced8e ed92edb6 edbaedbc edbeedc0 edc2edc4 edc4edcc edd0eddc ede4ee7c ee84ee96 ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee9a ee9cee9e eea6ede8 ee00ee04 ee06ed7a
+	5.644171779141105 - eec6eec8 eecaeecc
+	4.049079754601228 - e8dee066 e070e058 e062e804 e828e8a6 e8aee8b0 e8cae8cc
+	3.2719836400818 - f30cf30e f310f300 f30cf30e f310f300 f30cf30e f310f312 f312f2f8 f30cf30e f310f312 f312f2f8
+	Total Frequency: 61.513292433537835
+	Total Size: 190

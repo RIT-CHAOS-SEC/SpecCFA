@@ -1,0 +1,51 @@
+#!/bin/bash
+rm -rf build-verif
+mkdir -p build-verif
+
+# Copy speccfa's Verilog source code to temp directory
+cp ../openmsp430/msp_core/openMSP430_undefines.v ./build-verif/
+cp ../openmsp430/msp_core/openMSP430_defines.v ./build-verif/
+cp ../spec-cfa/block_fetch.v ./build-verif/
+cp ../spec-cfa/block_detect.v ./build-verif/
+cp ../spec-cfa/speccfa.v ./build-verif/
+# Specification
+cp ../verification_specs/ltl_specs.smv ./build-verif
+
+for filename in ./build-verif/*.v; do
+	sed -i "s/always @(posedge clk)/always @(*)/g" $filename
+done
+
+top=speccfa
+top_verilog=$top".v"
+top_smv=$top"_generated.smv"
+
+echo "sh ./verif-tools/verilog2smv.sh ./build-verif/$top_verilog ./build-verif/$top_smv $top"
+pwd
+sh ./verif-tools/verilog2smv.sh ./build-verif/$top_verilog ./build-verif/$top_smv $top
+
+sed -i "s/IVAR/VAR/g" ./build-verif/$top_smv # Hacky here since IVAR doesnt work properly
+echo '#include "ltl_specs.smv"' >> ./build-verif/$top_smv
+
+# ./verif-tools/NuSMV -coi -dcx -df -v 1 -pre cpp ./build-verif/$top_smv 
+## remove -dcx to find/print counter example for false statements
+if [ -z $1 ]; then
+	./verif-tools/NuSMV -coi -dcx -df -v 1 -pre cpp ./build-verif/$top_smv > ./build-verif/nusmv_run_log.txt 
+	total_spec=$(cat ./build-verif/nusmv_run_log.txt | grep -c specification)
+	total_true=$(cat ./build-verif/nusmv_run_log.txt | grep -c true)
+	total_false=$(cat ./build-verif/nusmv_run_log.txt | grep -c false)
+	echo "Total Specs:\t" $total_spec
+	echo "Total True:\t" $total_true
+	echo "Total False:\t" $total_false
+
+	if [ $total_false -gt 0 ]; then
+		echo "False: "
+		cat ./build-verif/nusmv_run_log.txt | grep false
+	fi
+
+else
+	./verif-tools/NuSMV -coi -df -v 1 -pre cpp ./build-verif/$top_smv 
+fi
+
+# rm -rf build-verif
+
+# echo "arg: " $1

@@ -1,0 +1,30 @@
+#define BLOCK0_SIZE		1
+uint32_t path0[BLOCK0_SIZE] = {0x804027c};
+#if TOTAL_BLOCKS >= 2
+#define BLOCK1_SIZE		1
+uint32_t path1[BLOCK1_SIZE] = {0x8040246};
+#endif
+#if TOTAL_BLOCKS >= 3
+#define BLOCK2_SIZE		3
+uint32_t path2[BLOCK2_SIZE] = {0x8040258, 0x80402e2, 0x804026c};
+#endif
+#if TOTAL_BLOCKS >= 4
+#define BLOCK3_SIZE		3
+uint32_t path3[BLOCK3_SIZE] = {0x8040258, 0x80402d0, 0x8040238};
+#endif
+#if TOTAL_BLOCKS >= 5
+#define BLOCK4_SIZE		3
+uint32_t path4[BLOCK4_SIZE] = {0x804029e, 0x80402f2, 0x8040322};
+#endif
+#if TOTAL_BLOCKS >= 6
+#define BLOCK5_SIZE		2
+uint32_t path5[BLOCK5_SIZE] = {0x80402b8, 0x8040238};
+#endif
+#if TOTAL_BLOCKS >= 7
+#define BLOCK6_SIZE		3
+uint32_t path6[BLOCK6_SIZE] = {0x8040258, 0x8040564, 0x804036c};
+#endif
+#if TOTAL_BLOCKS >= 8
+#define BLOCK7_SIZE		2
+uint32_t path7[BLOCK7_SIZE] = {0x8040258, 0x8040538};
+#endif

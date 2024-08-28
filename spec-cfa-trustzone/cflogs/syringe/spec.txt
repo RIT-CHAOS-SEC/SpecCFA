@@ -1,0 +1,64 @@
+
+#define BLOCK0_SIZE		1
+uint32_t path0[BLOCK0_SIZE] = {
+		0x8040246
+};
+#if TOTAL_BLOCKS >= 2
+#define BLOCK1_SIZE		6
+uint32_t path1[BLOCK1_SIZE] = {
+		0x8040258,
+		0x80403b6,
+		0x8040376,
+		0x8040380,
+		0x80403a2,
+		0x8040238
+};
+#endif
+#if TOTAL_BLOCKS >= 3
+#define BLOCK2_SIZE		5
+uint32_t path2[BLOCK2_SIZE] = {
+		0x8040258,
+		0x80403b6,
+		0x80403c6,
+		0x80403dc,
+		0x804040c
+};
+#endif
+#if TOTAL_BLOCKS >= 4
+#define BLOCK3_SIZE		3
+uint32_t path3[BLOCK3_SIZE] = {
+		0x80402a4,
+		0x80402c6,
+		0x8040268
+};
+#endif
+#if TOTAL_BLOCKS >= 5
+#define BLOCK4_SIZE		2
+uint32_t path4[BLOCK4_SIZE] = {
+		0x8040288,
+		0x80402d8
+};
+#endif
+#if TOTAL_BLOCKS >= 6
+#define BLOCK5_SIZE		2
+uint32_t path5[BLOCK5_SIZE] = {
+		0x80402e8,
+		0x80402f2
+
+};
+#endif
+#if TOTAL_BLOCKS >= 7
+#define BLOCK6_SIZE		3
+uint32_t path6[BLOCK6_SIZE] = {
+		0x80402fc,
+		0x8040376,
+		0x8040380
+};
+#endif
+#if TOTAL_BLOCKS >= 8
+#define BLOCK7_SIZE		2
+uint32_t path7[BLOCK7_SIZE] = {
+		0x80403a2,
+		0x8040238
+};
+#endif

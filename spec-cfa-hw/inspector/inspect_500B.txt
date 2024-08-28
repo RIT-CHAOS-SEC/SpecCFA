@@ -1,0 +1,41 @@
+--- Searching for k=1 transitions that repeat more than thresh=0 times ---
+e040a000: 1
+          2: 1
+          1: 1
+dffee040: 1
+e05ae0aa: 1
+e0bee06a: 1
+e08ee090: 2
+e09ee0a2: 2
+e0a8e0c2: 1
+e0c6e114: 1
+e11ce0c8: 2
+e0d0e0d2: 1
+e0d8e0e2: 1
+e102e06a: 1
+e0a8e106: 1
+e0d0e120: 1
+e138e144: 1
+e14ee150: 1
+e154e184: 1
+e190e156: 136
+e162e16e: 136
+e178e164: 272
+e178e17a: 136
+e168a000: 1
+        256: 5
+        128: 5
+dffee168: 2
+00000003: 1
+e17ea000: 1
+dffee17e: 1
+e15aa000: 1
+dffee15a: 1
+e172a000: 1
+dffee172: 1
+e190e192: 1
+e198e05e: 1
+e062e19c: 1
+e19ea000: 1
+        146: 1
+         73: 1

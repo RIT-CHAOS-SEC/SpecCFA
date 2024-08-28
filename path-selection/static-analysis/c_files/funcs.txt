@@ -1,0 +1,16 @@
+analogRead
+digitalRead
+handleMouse
+limit_xy
+main
+map
+mouseBegin
+mouseButtons
+mouseClick
+mouseEnd
+mouseIsPressed
+mouseMove
+mousePress
+mouseRelease
+readMouseButton
+setup

@@ -1,0 +1,54 @@
+50 Calculated Subpaths
+_______________________________
+	41.96319018404908 - eec4eec6 eec6eec8 eecaeed2 eed4eeba
+	6.584867075664621 - ed80ed82 ed8ced8e ed92edb6 edbaedbc edbeedc0 edc2edc4 edc4edcc edd0eddc ede4ee7c ee84ee96 ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee9a ee9cee9e eea6ede8 ee00ee04 ee06ed7a
+	5.644171779141105 - eec6eec8 eecaeecc
+	4.049079754601228 - e8dee066 e070e058 e062e804 e828e8a6 e8aee8b0 e8cae8cc
+	3.374233128834356 - f3cef3e6 f3eef3f0 f400f5ca f5d2f5d4 f5d8f5da f5eaf61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f624 f624f5ec f600f404 f408f40a f418f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438 f446f438
+	3.2719836400818 - f30cf30e f310f300 f30cf30e f310f300 f30cf30e f310f312 f312f2f8 f30cf30e f310f312 f312f2f8
+	2.965235173824131 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedcef0e ef10ef1a ef1cef26 ef28ee6e ee7aed5c ed80ed82 ed8ced8e ed92edb6 edbaedbc edbeedc0 edc2edc4 edc4edcc edd0eddc ede4ee7c ee84ee96 ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee9a ee9cee9e
+	2.2903885480572597 - e8dee066 e070e058 e062e804 e828e82a e832e834 e84ee850 e85ae59e e5aee65c e662e6b8 e6bee6c0 e6c6e6c8 e6d0e6d2 e6d4e6d6 e6e0e6e2
+	2.044989775051125 - eedceee2 eee6e1a6 e1d0ee7c ee84ee96 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee92
+	2.0040899795501024 - eec6eec8 eecaeed2 eed4eed6 eedceee2 eee6e1a6 e1d0ee7c ee84ee96 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee92 ee98ee86 ee8cee8e ee98ee86 ee8cee8e
+	1.7177914110429449 - f46af81a f85cf8b8 f8bcf8be f902f46e f474f476 f476f478 f47af47c f482f484 f488f49c f4b0f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4da f4daf4b2 f4b6f496
+	1.6359918200409 - e764e7f4 e7f6e7fa e802e85e e878e87a e884e8da e8dee066 e070e058 e062e804 e828e8a6 e8aee8b0
+	1.5541922290388548 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedce2bc e2bcf4e8 f4fcf518 f530f5ca f5d2f602 f606f608 f618f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f624 f624f5ec f600f534 f538f53a
+	1.5337423312883436 - f446f448 f448f41a f424f3d8 f3daf63c f658f65a f65cf65e f660f662 f664f6ca f6ccf666 f66ef670 f674f676 f684f686 f68ef690 f6c8f6d4 f704f3de
+	1.329243353783231 - ec8eecb2 ecdaecdc ece4ece6 eceaecf2 ecf6ecfa ecfeed00 ed04ed38 ed44ed4e ed58ee6a ee6aeee8 eeeeeefc eefeef0a ef0aeea8
+	1.2883435582822087 - f658f65a f65cf65e f660f662 f664f666 f66ef670 f674f676 f684f686 f68ef690 f6c8f6d4
+	1.2678936605316973 - eed4eeba eec4eed2
+	1.165644171779141 - f28af81a f85cf8b8 f8bcf8be f902f28e f294f81a f85cf8b8 f8bcf8be f902f298 f29ef2a0 f2a6f2a8 f2b0f2b2 f2b4f2b6 f2b8f2ba f2bcf2be f2dcf2de f2f6f30e f310f312 f312f2f8 f30cf30e
+	1.063394683026585 - e8f4e8f6 e8fef458 f46af81a f85cf8b8 f8bcf8be f902f46e f474f476 f476f478 f47af47c f482f484 f488f49c f4b0f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0 f4d8f4d0
+	1.0224948875255624 - f704f346 f354e2cc e2d4f1c6 f1e4f81a f85cf8b8 f8bcf8be f902f1e8 f1f0f81a f85cf8b8 f8bcf8be f902f1f4 f204ef34 ef4eef50 ef54ef56 ef58ef5e ef60ef62 ef64ef66 ef68ef6a ef8cef8e ef92ef94 ef96ef98 efa6efa8 efb4efac efb4efac efb4efac efb4efac efb4efac efb4efac efb4efac efb4efac efb4efac efb4efac efb4efac efb4efac efb4efac efb4efb6 efc6efc8 efceefc8 efceefc8 efceefc8 efceefc8 efceefc8 efceefc8 efceefc8 efceefc8 efceefc8 efceefc8 efceefc8 efceefc8 efceefc8
+	0.98159509202454 - f354e982 e982e98c e9a4e9ac e9b4f3b2 f3cef3d0 f3d2f3d4 f3daf63c f658f65a f65cf65e f660f6ce f704f3de f3e4e9b8 e9c0f262 f28af81a f85cf85e f860f904 f906f908 f910f28e f294f81a f85cf8b8 f8bcf8be f902f298 f29ef2a0 f2a6f2a8 f2b0f2b2 f2b4f362 f364f35a f360f342 f342f63c f658f65a f65cf65e f660f6ce f704f346 f354e9c4 e9c4e9ce e9e0ec22 ec2ee9e2 e9f6e9f8 ea10ea12 ea2aec32 ec62ea2c ea54e9e2 e9f6e9f8 ea10ea12 ea2aea58 ea5cea5e ea6ceede eedeeea8
+	0.9611451942740287 - ed8ced94 ed9eeda0 eda8ee08 ee14ee30 ee32ee3c ee40ee54 ee68ec92 ec92e544 e550e762 e764e7f4 e7f6e7fa e802e85e e878e87c e884e8da e8dee066 e070e058 e062e804 e828e8a6 e8aee8b0 e8cae8d8 e8dee066 e070e058 e062e804 e828e8a6 e8aee8b0 e8cae8d8 e8dee066 e070e058 e062e804 e828e82a e832e842 e84ee850 e85ae59e e5aee5b0 e5b4e084 e096e0ac e0b2e0c8 e0d6e5b8 e5cae084 e096e0ac e0b2e0c8 e0d6e5ce e5e0e64e e65ae7fc e802e85e e878e87a e884e8da
+	0.8588957055214724 - ed8ced94 ed9eeda0 eda8ee08 ee14ee30 ee32ee3c ee40ee54 ee68ec92 ec92e34c e38ce392 e3a2e38e e3a2e38e e3a2e3a4 e3aee3b0 e3c2e3c4
+	0.8588957055214724 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedce2bc e2bcf4e8 f4fcf518 f530f5ca f5d2f602 f606f608 f618f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a f622f61a
+	0.7770961145194274 - f310f300 f30cf30e f310f300 f30cf30e f310f312 f312f2f8 f30cf30e f310f312 f312f2f8 f30cf30e f310f300 f30cf30e f310f312 f312f2f8 f30cf30e f310f312 f312f2f8 f30cf30e f310f300 f30cf30e f310f312 f312f2f8 f30cf30e f310f312 f312f2f8 f30cf30e f310f300 f30cf30e f310f312 f312f2f8 f30cf30e f310f312 f312f2f8 f30cf30e f310f300 f30cf324 f332f334 f342f63c
+	0.5725971370143149 - f902f28e f294f81a f85cf8b8 f8bcf8be f902f298 f29ef2a0 f2a6f2a8 f2b0f2b2 f2b4f2b6 f2b8f2ba f2bcf2be f2dcf2de f2f6f30e f310f312 f312f2f8 f30cf30e f310f312 f312f2f8 f30cf30e f310f300 f30cf30e f310f300 f30cf30e f310f300 f30cf30e f310f300 f30cf30e f310f300
+	0.49079754601227 - f704f20c f210e2d8 e2d8f458 f46af81a f85cf8b8 f8bcf8be f902f46e f474f476 f476f478 f47af47c f482f4c6 f4cee2dc e2f4f3b2 f3cef3d0 f3d2f3d4 f3daf63c f658f65a f65cf65e f660f6ce f704f3de f3e4e2f8 e30ae4ba e4c6e730 e730e764
+	0.408997955010225 - f49ae902 e912e914 e91cf458 f46af81a f85cf85e f860f904 f906f908 f910f46e f474f4c6 f4cee920
+	0.408997955010225 - e5aee65c e662e664 e66cec94 ec94ec9c eca2ec96 ec9aec9c eca2ec96 ec9aec9c eca2ec96 ec9aec9c eca2ec96 ec9aec9c eca2ec96 ec9aec9c eca2ec96 ec9aecae ecb0e670 e672e684 e688e6b4 e6b6e7fc
+	0.408997955010225 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedce1ee e1f2e1f8 e208e1f4 e208e1f4 e208e20a e214e27a e28ef3b2 f3cef3d0 f3d2f3d4 f3daf63c f658f65a f65cf65e f660f6ce f704f3de f3e4e292 e2b8eea8
+	0.32719836400818 - e6eae70a e70ee484 e494e168 e188ec88 ec8eecb2 ecdaecdc ece4ece6 eceaecec ecf0ecfc ecfeed00 ed04ed38 ed44ed46 ed4ced54 ed58ee6a ee6aeee8 eeeeeef0
+	0.32719836400818 - eed4eeba eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedceee2 eee6eb76 eb84ec66 ec7aeb86 eba2eba4 ebc6ebc8 ebdaebdc ebf2ec7e ec86e076 e076f940 f940f944
+	0.3067484662576687 - f910f1e8 f1f0f81a f85cf8b8 f8bcf8be f902f1f4 f204ef34 ef4eef50 ef54ef56 ef58ef5e ef60ef62 ef64ef66 ef68f128 f12af01e f032f208 f208f63c
+	0.245398773006135 - f704f50c f516e2c0 e2c8f262 f28af81a f85cf8b8 f8bcf8be
+	0.2044989775051125 - e5aee65c e662e6b8 e6bee6c0 e6c6e6c8 e6d0e6d2 e6d4e6d6 e6e0e6e2 e6eae75a e75ee530 e540ec88
+	0.18404907975460122 - e332e334 e33ee344 e348ec88
+	0.18404907975460122 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedce1ee e1f2e1f8 e208e20a e214e27a e28ef3b2
+	0.16359918200409 - ee98ee9a ee9cee9e eea6e1d4 e1eaeea8
+	0.16359918200409 - ee40ee54 ee68ec92 ec92e18c e1a2eede
+	0.16359918200409 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedceee2 eee6ea70 ea88ea90 eaa2eaa4
+	0.16359918200409 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedceee2 eee6eb56 eb62eb64 eb72eede
+	0.14314928425357873 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedcef0e ef10ef12 ef1cef1e
+	0.14314928425357873 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedceee2 eee6eac0 eacceace
+	0.14314928425357873 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedceae0 eaeceaee eafeeea8
+	0.14314928425357873 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedceee2 eee6eb2c eb38eb3a
+	0.14314928425357873 - eed4eeba eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedceb4c eb52eede
+	0.1226993865030675 - e056e06a e070e058 e062e804 e828e82a e832e886 e8a4e8da
+	0.1226993865030675 - f53af53c f54af558 f566f568 f568f54c f556f506 f508f63c
+	0.1226993865030675 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedceab6 eabceede
+	0.1226993865030675 - eec4eec6 eec6eec8 eecaeed2 eed4eed6 eedceb22 eb28eede
+	Total Frequency: 98.1390593047035
+	Total Size: 3532

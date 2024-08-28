@@ -1,0 +1,34 @@
+#define SPECULATE
+
+#define TOTAL_BLOCKS	8
+
+#define BLOCK0_SIZE		1
+uint32_t path0[BLOCK0_SIZE] = {0x8040246};
+#if TOTAL_BLOCKS >= 2
+#define BLOCK1_SIZE		9
+uint32_t path1[BLOCK1_SIZE] = {0x804031e, 0x80402b2, 0x80402d2, 0x80402e0, 0x80402fc, 0x8040314, 0x804031e, 0x80402b2, 0x80402d2};
+#endif
+#if TOTAL_BLOCKS >= 3
+#define BLOCK2_SIZE		2
+uint32_t path2[BLOCK2_SIZE] = {0x80402b2, 0x804031e};
+#endif
+#if TOTAL_BLOCKS >= 4
+#define BLOCK3_SIZE		8
+uint32_t path3[BLOCK3_SIZE] = {0x804031e, 0x80402b2, 0x80402d2, 0x80402e0, 0x80402fc, 0x8040314, 0x804031e, 0x804032e};
+#endif
+#if TOTAL_BLOCKS >= 5
+#define BLOCK4_SIZE		4
+uint32_t path4[BLOCK4_SIZE] = {0x8040338, 0x8040362, 0x804039e, 0x80403d4};
+#endif
+#if TOTAL_BLOCKS >= 6
+#define BLOCK5_SIZE		3
+uint32_t path5[BLOCK5_SIZE] = {0x8040390, 0x804026c, 0x8040238};
+#endif
+#if TOTAL_BLOCKS >= 7
+#define BLOCK6_SIZE		3
+uint32_t path6[BLOCK6_SIZE] = {0x8040258, 0x8040284, 0x8040238};
+#endif
+#if TOTAL_BLOCKS >= 8
+#define BLOCK7_SIZE		3
+uint32_t path7[BLOCK7_SIZE] = {0x8040258, 0x8040296, 0x8040238};
+#endif
