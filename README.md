@@ -226,22 +226,28 @@ For the TrustZone variant of SpecCFA, The [STM32CubeIDE](https://www.st.com/en/d
 
 Along with SpecCFA's prototypes, we also provide 6 sample embedded applications for testing (and their simulation time in Vivado): 
 
-Ultrasonic Sensor (\~8 ms)
+**Ultrasonic Sensor (\~8 ms)**
+
 Ultrasonic sensor is ported from [Seeed-Studio](https://github.com/Seeed-Studio/LaunchPad_Kit/tree/master/Grove_Modules/ultrasonic_ranger), and implements a simple ultrasonic sensor using delay and sensor loops.
 
-Temperature Sensor (\~3 ms)
+**Temperature Sensor (\~3 ms)**
+
 This program implements a temperature and humidity sensor. It was ported from [Seeed-Studio](https://github.com/Seeed-Studio/LaunchPad_Kit/tree/master/Grove_Modules/temp_humi_sensor). It implements such sensors similarly to ultrasonic, using delay loops and sensing loops.
 
-Syringe Pump (\~55 ms)
+**Syringe Pump (\~55 ms)**
+
 This program simulates a remotely operated Syringe Pump that receives input to control dosages. It was ported to our platforms from [OpenSyringePump](https://github.com/manimino/OpenSyringePump).
 
-GPS (\~30 ms)
+**GPS (\~30 ms)**
+
 This program simulates an input stream from a GPS peripheral module, and performs the processing of the strings. This source code came from [TinyGPS](http://arduiniana.org/libraries/tinygpsplus/) and was modified to be compatible with our platform, mock its behavior, and to simulate inputs.
 
-Geiger Counter (\~4 ms)
+**Geiger Counter (\~4 ms)**
+
 This program comes from [ArduinoPocketGeiger](https://github.com/MonsieurV/ArduinoPocketGeiger) and was modified/ported to run on our platform and to mock inputs/behavior. It implements a Geiger Counter, which is used to measure radiation.
 
-Mouse (~2 minutes)
+**Mouse (~2 minutes)**
+
 This program comes from [Krakenus](https://github.com/Krakenus/arduino-joystick-mouse/blob/master/joystick_mouse.ino) on GitHub and implements a joystick mouse for Arduino. This source code was modified/ported to run on our platform and to mock inputs/behavior.
 
 ## CFLogs
