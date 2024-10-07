@@ -87,3 +87,105 @@ def swap_endianess(a):
             a[i+1] = tmp
             i += 2
         return a
+
+
+def detect_intersect(alst, blst, first=0):
+    if alst[0] in blst:
+        count = 0
+        aidx = 0
+        counting = False
+        for b in blst:
+            if b == alst[aidx]:
+                count += 1
+                counting = True
+                aidx += 1
+            elif b != alst[aidx] and counting:
+                counting = False
+        return count
+    elif alst[-1] in blst:
+        count = 0
+        aidx = len(alst)-1
+        counting = False
+        for bidx in range(1, len(blst)+1):
+            b = blst[len(blst)-bidx]
+            if b == alst[aidx]:
+                count += 1
+                counting = True
+                aidx -= 1
+            elif b != alst[aidx] and counting:
+                counting = False
+        return count
+    elif first == 0:
+        return detect_intersect(blst, alst, 1)
+    else:
+        return 0
+
+def custom_sort(dictionary, hex_ranges):
+    def key_function(item):
+        # Extract the numerical value from the dictionary key
+        num_value = int(item[1][0], 16)
+        ranges = [(int(start, 16), int(end, 16)) for start, end in hex_ranges]
+
+        # Find the first range that contains the numerical value
+        for i, r in enumerate(ranges):
+            if r[0] <= num_value <= r[1]:
+                return i  # Return the index of the first range
+
+        # If no range is found, return a very high value
+        return float('inf')
+
+    # Sort the dictionary items using the custom key function
+    sorted_dict = sorted(dictionary.items(), key=key_function)
+
+    return dict(sorted_dict)
+
+if __name__ == '__main__':
+    # # middle, last
+    # alst = ['a', 'b', 'e', 'f', 'g']
+    # blst = ['c', 'd', 'e', 'f']
+    # total = detect_intersect(alst, blst)
+    # print(total)
+
+    # # front, last
+    # alst = ['a', 'b', 'e', 'f', 'g']
+    # blst = ['c', 'd', 'a', 'b']
+    # total = detect_intersect(alst, blst)
+    # print(total)
+
+    # # last, last
+    # alst = ['z', 'a', 'b', 'e', 'f', 'g']
+    # blst = ['c', 'd', 'f', 'g']
+    # total = detect_intersect(alst, blst)
+    # print(total)
+
+    # # middle, middle
+    # alst = ['f', 'a', 'b', 'e', 'g']
+    # blst = ['c', 'a', 'b', 'z']
+    # total = detect_intersect(alst, blst)
+    # print(total)
+
+    # # middle, front
+    # alst = ['f', 'a', 'b', 'e', 'g']
+    # blst = ['a', 'b', 'z', 'c']
+    # total = detect_intersect(alst, blst)
+    # print(total)
+
+    # # front, front
+    # alst = ['a', 'b', 'e', 'g']
+    # blst = ['a', 'b', 'z', 'c']
+    # total = detect_intersect(alst, blst)
+    # print(total)
+
+    # Example usage:
+    my_dict = {
+        'A1': ['0x50', '0x55'],
+        'B1': ['0x30', '0x40'],
+        'C1': ['0x5', '0x15'],
+        'D1': ['0x25', '0x35'],
+    }
+
+    my_ranges = [('0x0', '0x20'), ('0x21', '0x45')]
+
+    result = custom_sort(my_dict, my_ranges)
+    for r in result:
+        print(r)

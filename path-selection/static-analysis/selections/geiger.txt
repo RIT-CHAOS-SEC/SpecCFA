@@ -1,13 +1,17 @@
 Final program subpaths:
-1:	e18ce18e e190e192 e19ae1f8
-2:	e2eee168 e18ce196
-3:	e208e21c e21ee224
-4:	e208e254 e276e280
-5:	e1f4e168 e18ce196
-6:	e18ce196 e19ae1f8 x
-7:	e18ce196 e19ae2f2
-8:	e08ae0b4 e0bee078 x
-9:	e08ae08c e0bee078
-10:	e07ee084 e084e2e4
-11:	e076e0b4 e0bee078 x
-All bytes: 68
+1:	"e07ee084", "e084e2e4", 
+2:	"e08ae0b4", "e0bee078", 
+3:	"e08ae08c", "e0bee078", 
+4:	"e1f4e168", "e18ce196", 
+5:	"e208e21c", "e21ee224", 
+6:	"e208e254", "e276e280", 
+7:	"e21ee220", "e222e224", 
+8:	"e234e076", "e076e0b4", 
+9:	"e28ae28c", "e28ee290", 
+10:	"e298e2d2", "e2d2e1ea", 
+11:	"e2c8e2ce", "e2cee19c", 
+12:	"e2e2e07c", "e07ee084", 
+13:	"e18ce196", "e19ae1f8", 
+14:	"e18ce18e", "e190e192", "e19ae1f8", 
+15:	"e2f6e088", "e08ae0b4", 
+All bytes: 92

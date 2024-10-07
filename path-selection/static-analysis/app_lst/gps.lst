@@ -2140,21 +2140,25 @@ void gpsdump()
     efa6:	0b 24       	jz	$+24     	;abs 0xefbe
     efa8:	0a 46       	mov	r6,	r10	
     efaa:	0b 47       	mov	r7,	r11	
+    
     efac:	12 c3       	clrc			
     efae:	0b 10       	rrc	r11		
     efb0:	0a 10       	rrc	r10		
     efb2:	7c 53       	add.b	#-1,	r12	;r3 As==11
     efb4:	fb 23       	jnz	$-8      	;abs 0xefac
+
     efb6:	81 4a 02 00 	mov	r10,	2(r1)	;0x0002(r1)
     efba:	81 4b 04 00 	mov	r11,	4(r1)	;0x0004(r1)
     efbe:	1c 43       	mov	#1,	r12	;r3 As==01
     efc0:	0d 43       	clr	r13		
     efc2:	79 f0 1f 00 	and.b	#31,	r9	;#0x001f
     efc6:	04 24       	jz	$+10     	;abs 0xefd0
+    
     efc8:	0c 5c       	rla	r12		
     efca:	0d 6d       	rlc	r13		
     efcc:	79 53       	add.b	#-1,	r9	;r3 As==11
     efce:	fc 23       	jnz	$-6      	;abs 0xefc8
+    
     efd0:	3c 53       	add	#-1,	r12	;r3 As==11
     efd2:	3d 63       	addc	#-1,	r13	;r3 As==11
     efd4:	0c f6       	and	r6,	r12	
@@ -2184,6 +2188,7 @@ void gpsdump()
     f016:	00 00 
     f018:	0f 93       	tst	r15		
     f01a:	4d 38       	jl	$+156    	;abs 0xf0b6
+    
     f01c:	0f 48       	mov	r8,	r15	
     f01e:	31 50 06 00 	add	#6,	r1	;#0x0006
     f022:	34 41       	pop	r4		
@@ -2195,22 +2200,27 @@ void gpsdump()
     f02e:	3a 41       	pop	r10		
     f030:	3b 41       	pop	r11		
     f032:	30 41       	ret			
+    
     f034:	2b 91       	cmp	@r1,	r11	
     f036:	67 38       	jl	$+208    	;abs 0xf106
+    
     f038:	81 4b 00 00 	mov	r11,	0(r1)	;0x0000(r1)
     f03c:	04 43       	clr	r4		
     f03e:	05 43       	clr	r5		
     f040:	5f 4f 01 00 	mov.b	1(r15),	r15	;0x0001(r15)
     f044:	5f 9e 01 00 	cmp.b	1(r14),	r15	;0x0001(r14)
     f048:	d8 27       	jz	$-78     	;abs 0xeffa
+    
     f04a:	4f 93       	tst.b	r15		
     f04c:	68 24       	jz	$+210    	;abs 0xf11e
+    
     f04e:	0e 46       	mov	r6,	r14	
     f050:	0f 47       	mov	r7,	r15	
     f052:	0e 84       	sub	r4,	r14	
     f054:	0f 75       	subc	r5,	r15	
     f056:	0f 93       	tst	r15		
     f058:	69 38       	jl	$+212    	;abs 0xf12c
+    
     f05a:	c8 43 01 00 	mov.b	#0,	1(r8)	;r3 As==00, 0x0001(r8)
     f05e:	a8 41 02 00 	mov	@r1,	2(r8)	;0x0002(r8)
     f062:	88 4e 04 00 	mov	r14,	4(r8)	;0x0004(r8)
@@ -2221,10 +2231,13 @@ void gpsdump()
     f070:	3d 63       	addc	#-1,	r13	;r3 As==11
     f072:	3d 90 ff 3f 	cmp	#16383,	r13	;#0x3fff
     f076:	05 28       	jnc	$+12     	;abs 0xf082
+    
     f078:	3d 90 00 40 	cmp	#16384,	r13	;#0x4000
     f07c:	17 2c       	jc	$+48     	;abs 0xf0ac
+    
     f07e:	3c 93       	cmp	#-1,	r12	;r3 As==11
     f080:	15 2c       	jc	$+44     	;abs 0xf0ac
+    
     f082:	1b 48 02 00 	mov	2(r8),	r11	;0x0002(r8)
     f086:	3b 53       	add	#-1,	r11	;r3 As==11
     f088:	0e 5e       	rla	r14		
@@ -2237,7 +2250,9 @@ void gpsdump()
     f096:	3d 63       	addc	#-1,	r13	;r3 As==11
     f098:	3d 90 ff 3f 	cmp	#16383,	r13	;#0x3fff
     f09c:	f5 2b       	jnc	$-20     	;abs 0xf088
+    
     f09e:	3c 24       	jz	$+122    	;abs 0xf118
+    
     f0a0:	88 4e 04 00 	mov	r14,	4(r8)	;0x0004(r8)
     f0a4:	88 4f 06 00 	mov	r15,	6(r8)	;0x0006(r8)
     f0a8:	88 4a 02 00 	mov	r10,	2(r8)	;0x0002(r8)
@@ -2245,6 +2260,7 @@ void gpsdump()
     f0b0:	00 00 
     f0b2:	0f 93       	tst	r15		
     f0b4:	b3 37       	jge	$-152    	;abs 0xf01c
+    
     f0b6:	0c 4e       	mov	r14,	r12	
     f0b8:	0d 4f       	mov	r15,	r13	
     f0ba:	1c f3       	and	#1,	r12	;r3 As==01
@@ -2261,8 +2277,10 @@ void gpsdump()
     f0d4:	98 53 02 00 	inc	2(r8)		;0x0002(r8)
     f0d8:	0f 48       	mov	r8,	r15	
     f0da:	a1 3f       	jmp	$-188    	;abs 0xf01e
+    
     f0dc:	6b 93       	cmp.b	#2,	r11	;r3 As==10
     f0de:	9f 23       	jnz	$-192    	;abs 0xf01e
+    
     f0e0:	ad 4f 00 00 	mov	@r15,	0(r13)	;0x0000(r13)
     f0e4:	9d 4f 02 00 	mov	2(r15),	2(r13)	;0x0002(r15), 0x0002(r13)
     f0e8:	02 00 
@@ -2278,21 +2296,28 @@ void gpsdump()
     f106:	06 43       	clr	r6		
     f108:	07 43       	clr	r7		
     f10a:	9a 3f       	jmp	$-202    	;abs 0xf040
+    
     f10c:	39 e3       	inv	r9		
     f10e:	19 53       	inc	r9		
     f110:	39 90 20 00 	cmp	#32,	r9	;#0x0020
     f114:	8f 37       	jge	$-224    	;abs 0xf034
+    
     f116:	3e 3f       	jmp	$-386    	;abs 0xef94
+    
     f118:	3c 93       	cmp	#-1,	r12	;r3 As==11
     f11a:	b6 2b       	jnc	$-146    	;abs 0xf088
+    
     f11c:	c1 3f       	jmp	$-124    	;abs 0xf0a0
+    
     f11e:	0e 44       	mov	r4,	r14	
     f120:	0f 45       	mov	r5,	r15	
     f122:	0e 86       	sub	r6,	r14	
     f124:	0f 77       	subc	r7,	r15	
     f126:	97 3f       	jmp	$-208    	;abs 0xf056
+    
     f128:	0f 4e       	mov	r14,	r15	
     f12a:	79 3f       	jmp	$-268    	;abs 0xf01e
+    
     f12c:	d8 43 01 00 	mov.b	#1,	1(r8)	;r3 As==01, 0x0001(r8)
     f130:	a8 41 02 00 	mov	@r1,	2(r8)	;0x0002(r8)
     f134:	3e e3       	inv	r14		
@@ -2302,8 +2327,10 @@ void gpsdump()
     f13c:	88 4e 04 00 	mov	r14,	4(r8)	;0x0004(r8)
     f140:	88 4f 06 00 	mov	r15,	6(r8)	;0x0006(r8)
     f144:	92 3f       	jmp	$-218    	;abs 0xf06a
+    
     f146:	0c 93       	tst	r12		
     f148:	7b 27       	jz	$-264    	;abs 0xf040
+    
     f14a:	81 59 00 00 	add	r9,	0(r1)	;0x0000(r1)
     f14e:	81 44 02 00 	mov	r4,	2(r1)	;0x0002(r1)
     f152:	81 45 04 00 	mov	r5,	4(r1)	;0x0004(r1)
@@ -2345,14 +2372,18 @@ void gpsdump()
     f1a8:	04 da       	bis	r10,	r4	
     f1aa:	05 db       	bis	r11,	r5	
     f1ac:	49 3f       	jmp	$-364    	;abs 0xf040
+    
     f1ae:	0a 43       	clr	r10		
     f1b0:	0b 43       	clr	r11		
     f1b2:	18 3f       	jmp	$-462    	;abs 0xefe4
+    
     f1b4:	6c 92       	cmp.b	#4,	r12	;r2 As==10
     f1b6:	33 23       	jnz	$-408    	;abs 0xf01e
+    
     f1b8:	df 9e 01 00 	cmp.b	1(r14),	1(r15)	;0x0001(r14), 0x0001(r15)
     f1bc:	01 00 
     f1be:	2f 27       	jz	$-416    	;abs 0xf01e
+    
     f1c0:	3f 40 fe f9 	mov	#-1538,	r15	;#0xf9fe
     f1c4:	2c 3f       	jmp	$-422    	;abs 0xf01e
 

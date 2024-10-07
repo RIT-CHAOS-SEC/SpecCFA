@@ -137,11 +137,11 @@ class Speculator:
             return sp[0].end_addr[2:]+sp[0].start_addr[2:]
         else:
             i = 1
-            s = sp[0].end_addr[2:]
+            s = "\""+sp[0].end_addr[2:]
             while i < len(sp):
-                s += sp[i].start_addr[2:]
+                s += sp[i].start_addr[2:]+"\", "
                 if i+1 < len(sp):
-                    s += " "+sp[i].end_addr[2:]
+                    s += "\""+sp[i].end_addr[2:]
                 i += 1
             return s
 

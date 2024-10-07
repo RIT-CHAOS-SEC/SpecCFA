@@ -1,0 +1,211 @@
+-------------
+Detected 0xe00c
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe008
+	assembly_functions[f.start_addr].instr_list: ['0xe000', '0xe004', '0xe008']
+-------------
+273
+-------------
+Detected 0xe010
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe00c
+	assembly_functions[f.start_addr].instr_list: ['0xe00c']
+-------------
+272
+-------------
+Detected 0xe028
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe026
+	assembly_functions[f.start_addr].instr_list: ['0xe010', '0xe014', '0xe016', '0xe018', '0xe01e', '0xe020', '0xe026']
+-------------
+265
+-------------
+Detected 0xe03e
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe03c
+	assembly_functions[f.start_addr].instr_list: ['0xe028', '0xe02c', '0xe02e', '0xe030', '0xe036', '0xe038', '0xe03c']
+-------------
+258
+-------------
+Detected 0xe0ca
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe0c6
+	assembly_functions[f.start_addr].instr_list: ['0xe03e', '0xe040', '0xe042', '0xe046', '0xe04a', '0xe04e', '0xe052', '0xe056', '0xe05a', '0xe05e', '0xe062', '0xe066', '0xe06a', '0xe06e', '0xe072', '0xe076', '0xe078', '0xe07c', '0xe07e', '0xe080', '0xe082', '0xe084', '0xe088', '0xe08a', '0xe08c', '0xe08e', '0xe092', '0xe096', '0xe09c', '0xe0a0', '0xe0a2', '0xe0a4', '0xe0a8', '0xe0aa', '0xe0b0', '0xe0b4', '0xe0b8', '0xe0bc', '0xe0be', '0xe0c0', '0xe0c4', '0xe0c6']
+-------------
+216
+-------------
+Detected 0xe0ce
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe0ca
+	assembly_functions[f.start_addr].instr_list: ['0xe0ca']
+-------------
+215
+-------------
+Detected 0xe0fa
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe0f8
+	assembly_functions[f.start_addr].instr_list: ['0xe0ce', '0xe0d0', '0xe0d2', '0xe0d4', '0xe0d6', '0xe0da', '0xe0de', '0xe0e0', '0xe0e4', '0xe0e8', '0xe0ea', '0xe0ec', '0xe0f0', '0xe0f4', '0xe0f6', '0xe0f8']
+-------------
+199
+-------------
+Detected 0xe13c
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe13a
+	assembly_functions[f.start_addr].instr_list: ['0xe0fa', '0xe0fc', '0xe0fe', '0xe100', '0xe102', '0xe104', '0xe108', '0xe10c', '0xe10e', '0xe110', '0xe112', '0xe114', '0xe116', '0xe118', '0xe11a', '0xe11c', '0xe120', '0xe124', '0xe126', '0xe128', '0xe12a', '0xe12c', '0xe130', '0xe134', '0xe136', '0xe138', '0xe13a']
+-------------
+172
+-------------
+Detected 0xe168
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe166
+	assembly_functions[f.start_addr].instr_list: ['0xe13c', '0xe13e', '0xe140', '0xe142', '0xe144', '0xe148', '0xe14c', '0xe14e', '0xe152', '0xe156', '0xe158', '0xe15a', '0xe15e', '0xe162', '0xe164', '0xe166']
+-------------
+156
+-------------
+Detected 0xe19c
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe19a
+	assembly_functions[f.start_addr].instr_list: ['0xe168', '0xe16a', '0xe16c', '0xe16e', '0xe170', '0xe174', '0xe178', '0xe17a', '0xe17e', '0xe182', '0xe184', '0xe186', '0xe188', '0xe18a', '0xe18c', '0xe18e', '0xe190', '0xe192', '0xe194', '0xe196', '0xe198', '0xe19a']
+-------------
+134
+-------------
+Detected 0xe1b6
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe1b4
+	assembly_functions[f.start_addr].instr_list: ['0xe19c', '0xe19e', '0xe1a0', '0xe1a2', '0xe1a6', '0xe1aa', '0xe1ae', '0xe1b2', '0xe1b4']
+-------------
+125
+-------------
+Detected 0xe1ea
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe1e8
+	assembly_functions[f.start_addr].instr_list: ['0xe1b6', '0xe1b8', '0xe1ba', '0xe1bc', '0xe1be', '0xe1c2', '0xe1c6', '0xe1ca', '0xe1ce', '0xe1d2', '0xe1d6', '0xe1d8', '0xe1dc', '0xe1e0', '0xe1e4', '0xe1e6', '0xe1e8']
+-------------
+108
+-------------
+Detected 0xe1fc
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe1fa
+	assembly_functions[f.start_addr].instr_list: ['0xe1ea', '0xe1ec', '0xe1ee', '0xe1f0', '0xe1f4', '0xe1f8', '0xe1fa']
+-------------
+101
+-------------
+Detected 0xe20a
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe208
+	assembly_functions[f.start_addr].instr_list: ['0xe1fc', '0xe1fe', '0xe200', '0xe202', '0xe206', '0xe208']
+-------------
+95
+-------------
+Detected 0xe236
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe234
+	assembly_functions[f.start_addr].instr_list: ['0xe20a', '0xe20c', '0xe20e', '0xe210', '0xe214', '0xe218', '0xe21c', '0xe21e', '0xe220', '0xe222', '0xe224', '0xe228', '0xe22c', '0xe22e', '0xe232', '0xe234']
+-------------
+79
+-------------
+Detected 0xe2e4
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe2e2
+	assembly_functions[f.start_addr].instr_list: ['0xe236', '0xe238', '0xe23a', '0xe23c', '0xe23e', '0xe240', '0xe242', '0xe246', '0xe248', '0xe24c', '0xe250', '0xe254', '0xe258', '0xe25c', '0xe260', '0xe262', '0xe264', '0xe266', '0xe268', '0xe26c', '0xe270', '0xe272', '0xe274', '0xe276', '0xe278', '0xe27a', '0xe27c', '0xe27e', '0xe280', '0xe284', '0xe288', '0xe28a', '0xe28c', '0xe28e', '0xe290', '0xe294', '0xe298', '0xe29a', '0xe29e', '0xe2a0', '0xe2a2', '0xe2a4', '0xe2a6', '0xe2aa', '0xe2ae', '0xe2b0', '0xe2b2', '0xe2b4', '0xe2b6', '0xe2b8', '0xe2ba', '0xe2bc', '0xe2be', '0xe2c2', '0xe2c6', '0xe2c8', '0xe2ca', '0xe2cc', '0xe2ce', '0xe2d2', '0xe2d6', '0xe2d8', '0xe2da', '0xe2dc', '0xe2de', '0xe2e0', '0xe2e2']
+-------------
+12
+-------------
+Detected 0xe2f8
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe2f6
+	assembly_functions[f.start_addr].instr_list: ['0xe2e4', '0xe2e6', '0xe2e8', '0xe2ea', '0xe2ee', '0xe2f2', '0xe2f4', '0xe2f6']
+-------------
+4
+-------------
+Detected 0xe2fa
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe2f8
+	assembly_functions[f.start_addr].instr_list: ['0xe2f8']
+-------------
+3
+-------------
+Detected 0xe2fe
+-------------
+Before change:
+	assembly_functions[f.start_addr].end_addr: 0xe302
+--
+After change:
+	assembly_functions[f.start_addr].end_addr: 0xe2fa
+	assembly_functions[f.start_addr].instr_list: ['0xe2fa']
+-------------
+2
+2
+reached outer else
